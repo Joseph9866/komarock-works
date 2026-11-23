@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Play } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -31,17 +30,18 @@ export default function Hero() {
           </div>
 
           <div className="relative">
-            <div className="aspect-video bg-dark-slate rounded-2xl overflow-hidden shadow-2xl relative group cursor-pointer">
-              <div className="absolute inset-0 bg-deep-navy/40 flex items-center justify-center">
-                <div className="w-20 h-20 bg-royal-blue rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
-                  <Play className="w-10 h-10 text-white ml-1" fill="white" />
-                </div>
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 p-6 bg-deep-navy/80">
-                <p className="font-heading font-bold text-lg">Watch Our Showreel</p>
-                <p className="text-sm text-gray-300">A glimpse into our creative work</p>
-              </div>
-            </div>
+            <video
+              src="/komarockvideo.mp4"
+              className="aspect-video w-full rounded-2xl bg-dark-slate object-cover shadow-2xl"
+              controls
+              controlsList="nodownload"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+              aria-label="Komarock Works showreel"
+            />
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -21,12 +22,14 @@ export default function Navbar() {
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-royal-blue rounded-lg flex items-center justify-center">
-              <span className="text-white font-heading font-bold text-xl">K</span>
-            </div>
-            <span className="font-heading font-bold text-2xl text-deep-navy">
-              Komarock Works
-            </span>
+            <Image
+              src="/komarockworks.png"
+              alt="Komarock Works — Media & Public Speaking"
+              width={120}
+              height={78}
+              priority
+              className="h-14 w-auto object-contain"
+            />
           </Link>
 
           {/* Desktop Navigation */}
