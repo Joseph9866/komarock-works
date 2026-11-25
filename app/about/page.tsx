@@ -1,4 +1,5 @@
-import { coreValues, orgStructure } from "@/lib/data";
+import Image from "next/image";
+import { coreValues } from "@/lib/data";
 import { Target, Eye, Award } from "lucide-react";
 
 export default function AboutPage() {
@@ -33,8 +34,14 @@ export default function AboutPage() {
             <div className="bg-off-white rounded-2xl p-8">
               <div className="aspect-square bg-deep-navy rounded-xl flex items-center justify-center">
                 <div className="text-center text-white p-8">
-                  <div className="w-20 h-20 bg-royal-blue rounded-full flex items-center justify-center mx-auto mb-6">
-                    <span className="font-heading font-bold text-3xl">K</span>
+                  <div className="mb-6 inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 shadow-md">
+                    <Image
+                      src="/komarockworks.png"
+                      alt="Komarock Works"
+                      width={120}
+                      height={78}
+                      className="h-16 w-auto object-contain"
+                    />
                   </div>
                   <p className="font-heading font-bold text-2xl mb-2">Est. Komarock, Nairobi</p>
                   <p className="text-gray-300">Rooted in community. Built for impact.</p>
@@ -64,7 +71,7 @@ export default function AboutPage() {
               </div>
               <h3 className="font-heading font-bold text-2xl text-deep-navy mb-4">Our Vision</h3>
               <p className="text-muted-gray leading-relaxed text-lg">
-                To be East Africa's most trusted creative and professional development partner, recognized for the quality of our work, the integrity of our process, and the lasting impact we create for every client and community we serve.
+                To be East Africa&apos;s most trusted creative and professional development partner, recognized for the quality of our work, the integrity of our process, and the lasting impact we create for every client and community we serve.
               </p>
             </div>
           </div>
@@ -95,53 +102,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Organizational Structure */}
-      <section className="py-20 bg-off-white">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-heading font-bold text-4xl md:text-5xl text-deep-navy mb-4">Organizational Structure</h2>
-            <p className="text-xl text-muted-gray max-w-3xl mx-auto">
-              A clear leadership framework ensuring accountability, quality, and strategic direction across all departments.
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="flex justify-center mb-8">
-              <div className="bg-deep-navy text-white p-8 rounded-xl text-center w-80">
-                <h3 className="font-heading font-bold text-xl mb-2">{orgStructure.managingDirector.name}</h3>
-                <p className="text-sky-blue">{orgStructure.managingDirector.title}</p>
-              </div>
-            </div>
-            <div className="flex justify-center mb-8">
-              <div className="w-0.5 h-8 bg-royal-blue"></div>
-            </div>
-            <div className="flex justify-center mb-8">
-              <div className="bg-royal-blue text-white p-8 rounded-xl text-center w-80">
-                <h3 className="font-heading font-bold text-xl mb-2">{orgStructure.deputyManagingDirector.name}</h3>
-                <p className="text-sky-blue">{orgStructure.deputyManagingDirector.title}</p>
-              </div>
-            </div>
-            <div className="flex justify-center mb-8">
-              <div className="w-full max-w-3xl relative h-8">
-                <div className="absolute top-0 left-1/2 w-0.5 h-4 bg-royal-blue"></div>
-                <div className="absolute top-4 left-[16.67%] right-[16.67%] h-0.5 bg-royal-blue"></div>
-                <div className="absolute top-4 left-[16.67%] w-0.5 h-4 bg-royal-blue"></div>
-                <div className="absolute top-4 left-1/2 w-0.5 h-4 bg-royal-blue"></div>
-                <div className="absolute top-4 right-[16.67%] w-0.5 h-4 bg-royal-blue"></div>
-              </div>
-            </div>
-            <div className="grid md:grid-cols-3 gap-6">
-              {orgStructure.departments.map((dept, index) => (
-                <div key={index} className="bg-white p-6 rounded-xl border-2 border-royal-blue">
-                  <h3 className="font-heading font-bold text-lg text-deep-navy mb-2">{dept.name}</h3>
-                  <p className="text-royal-blue font-semibold mb-3">{dept.head}</p>
-                  <p className="text-muted-gray text-sm leading-relaxed">{dept.focus}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
     </>
   );
 }

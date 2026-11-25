@@ -30,7 +30,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className="h-full antialiased scroll-smooth" suppressHydrationWarning>
+    <html
+      lang="en"
+      data-scroll-behavior="smooth"
+      className="h-full antialiased"
+      suppressHydrationWarning
+    >
       <body className="min-h-full flex flex-col bg-white text-dark-slate" suppressHydrationWarning>
         <Navbar />
         <main className="flex-1">{children}</main>

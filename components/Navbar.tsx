@@ -3,14 +3,17 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
+    { href: "/team", label: "Team" },
     { href: "/services", label: "Services" },
     { href: "/trainings", label: "Trainings" },
     { href: "/portfolio", label: "Portfolio" },
@@ -38,7 +41,8 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-dark-slate hover:text-royal-blue font-medium transition-colors duration-200"
+                aria-current={pathname === link.href ? "page" : undefined}
+                className={`font-medium transition-colors duration-200 ${pathname === link.href ? "text-royal-blue" : "text-dark-slate hover:text-royal-blue"}`}
               >
                 {link.label}
               </Link>
@@ -70,7 +74,8 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="text-dark-slate hover:text-royal-blue font-medium py-2 transition-colors duration-200"
+                  aria-current={pathname === link.href ? "page" : undefined}
+                  className={`font-medium py-2 transition-colors duration-200 ${pathname === link.href ? "text-royal-blue" : "text-dark-slate hover:text-royal-blue"}`}
                 >
                   {link.label}
                 </Link>

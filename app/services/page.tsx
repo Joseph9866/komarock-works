@@ -68,7 +68,7 @@ export default function ServicesPage() {
           <div className="mb-16">
             <h3 className="font-heading font-bold text-3xl text-deep-navy mb-4">Weekly Digital Content Management</h3>
             <p className="text-lg text-muted-gray mb-8">
-              Structured content partnership tiers designed to match your brand's growth stage and communication needs.
+              Structured content partnership tiers designed to match your brand&apos;s growth stage and communication needs.
             </p>
             <div className="grid md:grid-cols-3 gap-8">
               {contentTiers.map((tier) => (

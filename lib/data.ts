@@ -368,32 +368,3 @@ export const coreValues = [
   },
 ];
 
-export const orgStructure = {
-  managingDirector: {
-    name: "Managing Director",
-    title: "Chief Executive Officer",
-  },
-  deputyManagingDirector: {
-    name: "Deputy Managing Director",
-    title: "Operations & Strategy",
-  },
-  departments: [
-    {
-      name: "Photography Department",
-      head: "Head of Photography",
-      focus: "Commercial, editorial, and event photography services.",
-    },
-    {
-      name: "Videography Department",
-      head: "Head of Videography",
-      focus:
-        "Cinematic production, documentaries, and digital video content.",
-    },
-    {
-      name: "Commitment to Community",
-      head: "Community Impact Lead",
-      focus:
-        "Training programs, sponsored courses, and community partnership initiatives.",
-    },
-  ],
-};

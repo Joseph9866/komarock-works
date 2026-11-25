@@ -176,7 +176,7 @@ function PaymentModal({ courseId, onClose }: { courseId: string; onClose: () => 
           onClick={onClose}
           className="w-full bg-royal-blue text-white px-6 py-3 rounded-lg font-semibold hover:bg-deep-navy transition-colors duration-200"
         >
-          I've Completed Payment
+          I&apos;ve Completed Payment
         </button>
       </div>
     </div>
